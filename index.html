@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>APNA KIRYANA</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        brandPurple: {
+                            DEFAULT: '#7C3AED',  // ungu vivid
+                            dark: '#5B21B6',     // ungu tua
+                            light: '#C4B5FD',    // ungu muda
+                            hover: '#6D28D9'     // hover ungu
+                        },
+                        brandGold: '#FBBF24', // kuning keemasan
+                        brandGreen: {
+                            light: '#D1FAE5',    // hijau muda
+                            DEFAULT: '#10B981',  // hijau segar
+                            dark: '#047857',     // hijau tua
+                            hover: '#059669'     // hijau hover
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        html {
+            transition: background-color 0.4s, color 0.4s;
+        }
+    </style>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+
+<body class="bg-white text-gray-900 font-sans transition-colors duration-500 dark:bg-gray-900 dark:text-gray-100">
+
+    <!-- Navbar -->
+    <nav class="fixed w-full z-50 bg-brandPurple-dark bg-opacity-95 backdrop-blur-md shadow-lg">
+        <div class="max-w-7xl mx-auto flex justify-between items-center py-4 px-6">
+            <h1 class="text-2xl font-extrabold text-brandGold select-none">Ilham Portfolio</h1>
+
+            <!-- Desktop Menu -->
+            <ul id="nav-links" class="hidden md:flex items-center space-x-8 text-brandGold font-semibold">
+                <li><a href="about.html"
+                        class="hover:text-brandGold hover:underline transition focus:outline-none focus:ring-2 focus:ring-brandGold rounded">About</a>
+                </li>
+                <li><a href="produk.html"
+                        class="hover:text-brandGold hover:underline transition focus:outline-none focus:ring-2 focus:ring-brandGold rounded">Product</a>
+                </li>
+                <li><a href="#contact"
+                        class="hover:text-brandGold hover:underline transition focus:outline-none focus:ring-2 focus:ring-brandGold rounded">Contact</a>
+                </li>
+                <li>
+                    <button id="theme-toggle" aria-label="Toggle dark mode"
+                        class="bg-brandGold text-brandPurple-dark p-2 rounded-full shadow hover:bg-yellow-400 transition focus:outline-none focus:ring-2 focus:ring-yellow-400">
+                        <i id="theme-icon" class="fas fa-moon"></i>
+                    </button>
+                </li>
+            </ul>
+
+            <!-- Mobile Hamburger Button -->
+            <button id="mobile-menu-button" aria-label="Toggle menu"
+                class="md:hidden text-brandGold focus:outline-none focus:ring-2 focus:ring-brandGold rounded">
+                <svg id="menu-open" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M4 8h16M4 16h16"></path>
+                </svg>
+                <svg id="menu-close" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 hidden" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu"
+            class="hidden md:hidden bg-brandPurple-dark bg-opacity-95 backdrop-blur-md px-6 pb-6 space-y-3 select-none">
+            <a href="about.html"
+                class="block py-2 text-brandGold hover:underline hover:text-yellow-400 transition focus:outline-none focus:ring-2 focus:ring-yellow-400 rounded">About</a>
+            <a href="feedback.html"
+                class="block py-2 text-brandGold hover:underline hover:text-yellow-400 transition focus:outline-none focus:ring-2 focus:ring-yellow-400 rounded">Feedback</a>
+            <a href="produk.html"
+                class="block py-2 text-brandGold hover:underline hover:text-yellow-400 transition focus:outline-none focus:ring-2 focus:ring-yellow-400 rounded">Product</a>
+            <a href="#contact"
+                class="block py-2 text-brandGold hover:underline hover:text-yellow-400 transition focus:outline-none focus:ring-2 focus:ring-yellow-400 rounded">Contact</a>
+            <button id="theme-toggle-mobile" aria-label="Toggle dark mode"
+                class="w-full bg-brandGold text-brandPurple-dark py-2 rounded-full shadow hover:bg-yellow-400 transition flex items-center justify-center gap-2 focus:outline-none focus:ring-2 focus:ring-yellow-400">
+                <i id="theme-icon-mobile" class="fas fa-moon"></i>
+                Toggle Theme
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section
+        class="pt-28 text-center py-12 px-6 bg-brandGreen-light min-h-[60vh] flex flex-col justify-center dark:bg-brandGreen-dark">
+        <h1 class="text-5xl font-extrabold text-brandGreen-dark dark:text-brandGreen-light leading-tight select-text">
+            Soraya Moeslim</h1>
+        <h2
+            class="text-3xl italic mt-2 font-light select-text text-brandGreen hover:text-brandGold transition-colors duration-300 dark:text-brandGreen-light dark:hover:text-brandGold">
+            The <span
+                class="text-brandGreen hover:text-brandGold dark:text-brandGreen-light dark:hover:text-brandGold">Original Scent of Shopping!!</span></h2>
+        <p class="mt-6 text-lg max-w-xl mx-auto leading-relaxed select-text text-gray-700 dark:text-gray-300">
+            toko Soraya adalah destinasi fashion muslim yang menghadirkan koleksi busana elegan, modern, dan tetap syar’i.
+             Kami percaya bahwa setiap muslimah berhak tampil anggun dengan balutan busana yang nyaman dan penuh makna.
+              Dari gamis harian hingga setelan pesta, setiap produk kami dirancang dengan detail, bahan berkualitas,
+               dan sentuhan tren terkini.,<br />
+        </p>
+        <a href="about.html" class="mt-8 inline-block">
+            <button
+                class="bg-brandGreen text-white px-8 py-3 rounded-full font-semibold text-lg shadow-lg hover:bg-brandGreen-hover transition-colors duration-300 focus:outline-none focus:ring-4 focus:ring-brandGreen-light dark:focus:ring-brandGreen-dark">
+                Click Me
+            </button>
+        </a>
+    </section>
+
+    <script>
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuOpenIcon = document.getElementById('menu-open');
+        const menuCloseIcon = document.getElementById('menu-close');
+
+        mobileMenuButton.addEventListener('click', () => {
+            const isHidden = mobileMenu.classList.contains('hidden');
+            if (isHidden) {
+                mobileMenu.classList.remove('hidden');
+                menuOpenIcon.classList.add('hidden');
+                menuCloseIcon.classList.remove('hidden');
+                mobileMenuButton.setAttribute('aria-expanded', 'true');
+            } else {
+                mobileMenu.classList.add('hidden');
+                menuOpenIcon.classList.remove('hidden');
+                menuCloseIcon.classList.add('hidden');
+                mobileMenuButton.setAttribute('aria-expanded', 'false');
+            }
+        });
+
+        // Theme toggle buttons & icons
+        const themeToggleButtons = [
+            document.getElementById('theme-toggle'),
+            document.getElementById('theme-toggle-mobile')
+        ];
+        const themeIcon = document.getElementById('theme-icon');
+        const themeIconMobile = document.getElementById('theme-icon-mobile');
+
+        const userPrefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+        const savedTheme = localStorage.getItem('theme');
+        let currentTheme;
+
+        if (savedTheme === 'dark' || (!savedTheme && userPrefersDark)) {
+            currentTheme = 'dark';
+            document.documentElement.classList.add('dark');
+        } else {
+            currentTheme = 'light';
+            document.documentElement.classList.remove('dark');
+        }
+        updateThemeIcons(currentTheme);
+
+        themeToggleButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                currentTheme = currentTheme === 'dark' ? 'light' : 'dark';
+                if (currentTheme === 'dark') {
+                    document.documentElement.classList.add('dark');
+                } else {
+                    document.documentElement.classList.remove('dark');
+                }
+                localStorage.setItem('theme', currentTheme);
+                updateThemeIcons(currentTheme);
+            });
+        });
+
+        function updateThemeIcons(theme) {
+            if (theme === 'dark') {
+                themeIcon.classList.replace('fa-moon', 'fa-sun');
+                themeIconMobile.classList.replace('fa-moon', 'fa-sun');
+            } else {
+                themeIcon.classList.replace('fa-sun', 'fa-moon');
+                themeIconMobile.classList.replace('fa-sun', 'fa-moon');
+            }
+        }
+    </script>
+</body>
+
+</html>
